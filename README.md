@@ -77,33 +77,33 @@ const box = new Box({
 		[35.56, 3.81],
 		[35.56, 43.18],
 	],
-	breakouts: {
+	breakouts: [{
 		/* Side of the PCB:
 		 * 'n': Northern side, upper edge
 		 * 'e': Eastern side, right edge
 		 * 's': Southern side, lower edge
 		 * 'w': Western side, left edge */
-		w: {
-			/* Position of [0, 0]:
-			 * 'pcb-left': Left upper corner when locking on the PCB's side
-			 * 'center': Center of the box */
-			anchor: 'pcb-left',
+		face: 'w',
 
-			/* 2D sketch of the breakouts:
-			 * breakout-name: geom2 */
-			sketch: {
-				j8_5: BL([0.635, 0], rectangle({size: [45.72, 10.3]}))
-			}
-		},
-		e: {
-			anchor: 'pcb-left',
-			sketch: {
-				j4: BC([6.35, 0], rectangle({size: [11.36, 10.3]})),
-				j3: BC([24.13, 1.02], rectangle({size: [11.31, 15.11]})),
-				j1: BC([40.64, 1.02], rectangle({size: [11.31, 15.11]}))
-			}
+		/* Position of [0, 0]:
+		 * 'pcb-left': Left upper corner when locking on the PCB's side
+		 * 'center': Center of the box */
+		anchor: 'pcb-left',
+
+		/* 2D sketch of the breakouts:
+		 * breakout-name: geom2 */
+		sketch: {
+			j8_5: BL([0.635, 0], rectangle({size: [45.72, 10.3]}))
 		}
-	}
+	}, {
+		face: 'e',
+		anchor: 'pcb-left',
+		sketch: {
+			j4: BC([6.35, 0], rectangle({size: [11.36, 10.3]})),
+			j3: BC([24.13, 1.02], rectangle({size: [11.31, 15.11]})),
+			j1: BC([40.64, 1.02], rectangle({size: [11.31, 15.11]}))
+		}
+	}]
 });
 
 box.createBaseSTL('relay-base.stl');

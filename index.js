@@ -51,7 +51,7 @@ class Box {
 				domeRadius: box.mountingScrew.domeDiameter / 2,
 				points: mounts
 			}],
-			...Object.entries(breakouts).map(([face, {anchor, sketch}]) => {
+			...breakouts.map(({face, anchor, sketch}) => {
 				let alignModes = ['center', 'center'];
 				let alignAnchor = [0, 0];
 				if (anchor == 'pcb-left') {
