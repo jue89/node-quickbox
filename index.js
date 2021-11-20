@@ -97,7 +97,7 @@ class Box {
 			radius: box.radius,
 			wall: box.wall,
 			screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize * 2,
-			screwHeadRadius: box.boxScrew.screwHeadDiamter / 2 + tolerances.oversize * 2,
+			screwHeadRadius: box.boxScrew.screwHeadDiameter / 2 + tolerances.oversize * 2,
 			oversize: tolerances.oversize
 		});
 	}

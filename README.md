@@ -45,7 +45,7 @@ const box = new Box({
 			screwDiameter: 3,
 
 			/* Screw head diameter */
-			screwHeadDiamter: 5.6
+			screwHeadDiameter: 5.6
 		},
 
 		/* Inner PCB mounting screws: */
