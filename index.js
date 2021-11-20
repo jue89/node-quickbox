@@ -42,7 +42,9 @@ class Box {
 				],
 				radius: box.radius,
 				wall: box.wall,
+				screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize * 2,
 				threadRadius: box.boxScrew.threadInsertDiameter / 2 + tolerances.oversize * 2,
+				threadHeight: box.boxScrew.threadInsertHeight
 			}],
 			[addMountingHoles, {
 				origin: [pcb.padding[3], pcb.padding[2], box.wall],
