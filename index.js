@@ -26,12 +26,12 @@ function serialize (lib, geom) {
 }
 
 class Box {
-	constructor (defintion) {
-		this.defintion = defintion;
+	constructor (definition) {
+		this.definition = definition;
 	}
 
 	createBase () {
-		const {tolerances, box, pcb, mounts, breakouts} = this.defintion;
+		const {tolerances, box, pcb, mounts, breakouts} = this.definition;
 
 		return exec([
 			[boxBase, {
@@ -88,7 +88,7 @@ class Box {
 	}
 
 	createCap () {
-		const {tolerances, box, pcb, mounts, breakouts} = this.defintion;
+		const {tolerances, box, pcb} = this.definition;
 		return boxCap({
 			size: [
 				pcb.padding[1] + pcb.size[0] + pcb.padding[3],
