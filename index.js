@@ -42,14 +42,14 @@ class Box {
 				],
 				radius: box.radius,
 				wall: box.wall,
-				screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize * 2,
-				threadRadius: box.boxScrew.threadInsertDiameter / 2 + tolerances.oversize * 2,
+				screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize,
+				threadRadius: box.boxScrew.threadInsertDiameter / 2 + tolerances.oversize,
 				threadHeight: box.boxScrew.threadInsertHeight
 			}],
 			[addMountingHoles, {
 				origin: [pcb.padding[3], pcb.padding[2], box.wall],
 				threadHeight: box.mountingScrew.threadInsertHeight,
-				threadRadius: box.mountingScrew.threadInsertDiameter / 2 + tolerances.oversize * 2,
+				threadRadius: box.mountingScrew.threadInsertDiameter / 2 + tolerances.oversize,
 				domeRadius: box.mountingScrew.domeDiameter / 2,
 				points: mounts
 			}],
@@ -98,8 +98,8 @@ class Box {
 			],
 			radius: box.radius,
 			wall: box.wall,
-			screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize * 2,
-			screwHeadRadius: box.boxScrew.screwHeadDiameter / 2 + tolerances.oversize * 2,
+			screwRadius: box.boxScrew.screwDiameter / 2 + tolerances.oversize,
+			screwHeadRadius: box.boxScrew.screwHeadDiameter / 2 + tolerances.oversize,
 			oversize: tolerances.oversize
 		});
 	}
