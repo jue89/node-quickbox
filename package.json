@@ -1,6 +1,6 @@
 {
   "name": "quickbox",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Enclosure generator for PCBs",
   "main": "index.js",
   "directories": {
